@@ -32,13 +32,13 @@ namespace Properties
 
 
         // TODO improve
-        public int GetDeckSize
+        public int DeckSize
         {
             get { return this.names.Length * this.seeds.Length; }
         }
 
         /// TODO improve
-        public ISet<Card> GetDeck
+        public ISet<Card> Deck
         {
             get
             {

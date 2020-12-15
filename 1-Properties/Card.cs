@@ -7,9 +7,6 @@ namespace Properties
     /// </summary>
     public class Card
     {
-        private readonly string seed;
-        private readonly string name;
-        private readonly int ordinal;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Card"/> class.
@@ -19,9 +16,9 @@ namespace Properties
         /// <param name="ordinal">the ordinal number of the card.</param>
         public Card(string name, string seed, int ordinal)
         {
-            this.name = name;
-            this.ordinal = ordinal;
-            this.seed = seed;
+            this.Name = name;
+            this.Ordinal = ordinal;
+            this.Seed = seed;
         }
 
         /// <summary>
@@ -36,19 +33,19 @@ namespace Properties
         // TODO improve
         public string Seed
         {
-            get { return this.seed; }
+            get;
         }
 
         // TODO improve
         public string Name
         {
-            get { return this.name; }
+            get;
         }
 
         // TODO improve
         public int Ordinal
         {
-            get { return this.ordinal; }
+            get;
         }
 
         /// <inheritdoc cref="object.ToString"/>
@@ -62,15 +59,15 @@ namespace Properties
         public override bool Equals(object obj)
         {
             return obj is Card card &&
-                   seed == card.seed &&
-                   name == card.name &&
-                   ordinal == card.ordinal;
+                   Seed == card.Seed &&
+                   Name == card.Name &&
+                   Ordinal == card.Ordinal;
         }
 
         // TODO generate GetHashCode()
         public override int GetHashCode()
         {
-            return HashCode.Combine(seed, name, ordinal);
+            return HashCode.Combine(Seed, Name, Ordinal);
         }
 
         
